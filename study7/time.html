@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">;
+    <title>Document</title>;
+  </head>
+  <body>
+    <style>
+      .timeout {
+        background-color: orange;
+        width: 60%;
+        height: 100%;
+        text-align: center;
+        padding-top: 60px;
+      }
+    </style>
+    <div class="timeout"">7초 후에 내가 사라져볼게 얍</div>
+    <script>
+      let timecnt = 7;
+      setInterval(function(){
+        timecnt--;
+        document.querySelector(".timeout").innerHTML = `${timecnt}초 후에 내가 사라져볼게 얍`;
+      }, 1000);
+      setTimeout(function(){
+        document.querySelector(".timeout").style.display = "none";
+      }, 7000);
+    </script>
+  </body>
+</html>

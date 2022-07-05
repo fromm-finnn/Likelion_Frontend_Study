@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      .산들산들 {
+        width: 0px;
+        height: 5px;
+        background-color: blue;
+      }
+      .lyrics {
+        width: 250px;
+        height: 150px;
+        overflow-y: scroll;
+        background-color: white;
+      }
+    </style>
+    <div class="산들산들"></div>
+    <div class="lyrics">
+      <p>
+        그렇게 사라져 가는데 아무것도 할 수 없었네
+        잊을 수 없을 것만 같던 순간도 희미해져 갔어
+        영원히 변하지 않는건 세상 어디에도 없었지
+        하지만 잊을 수 없는게 어딘가 남아 있을거야
+        나는 이런 평범한 사람
+        누구가의 별이 되기엔
+        아직은 부족하지 그래도 난 가네
+        나는 나의 길을 가
+        소나기 피할 수 없어
+        구름 위를 날아 어디든지 가
+        외로워도 멈출 수 없는 그런 나의 길
+        다가올 시간 속의 너는 나를 잊은 채로 살겠지
+        하지만 잊을 수 없는게 조금은 남아있을 거야
+        새로운 세상으로 가면
+        나도 달라질 수 있을까
+        맘처럼 쉽진 않겠지만 꼭 한번 떠나보고 싶어
+        나는 이런 평범한 사람
+        많은 세월 살아왓지만
+        아직도 부족하지 그래서난 가네
+        나는 나의 길을 가
+        소나기 두렵지 않아
+        구름 위를 날아 어디든지 가
+        외로워도 웃음 지을 수 있는 곳이면
+        어디든 가고 싶네
+        그게 나의 길
+        모든것이 사라져 가는데 아무것도 할 수 없었네
+        잊을 수 없을 것만 같던 순간도 희미해져 갔어 접기
+      </p>
+    </div>
+    <script>
+      let bar =document.querySelector(".산들산들");
+      let lyrics = document.querySelector(".lyrics");
+
+      lyrics.addEventListener("scroll", function() {
+        let scrollTop = lyrics.scrollTop;
+        let scrollHeight = lyrics.scrollHeight - lyrics.clientHeight;
+        let per = scrollTop / scrollHeight;
+
+        bar.style.width = `${per*250}px`;
+      });
+    </script>
+  </body>
+</html>
